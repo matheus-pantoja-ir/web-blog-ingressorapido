@@ -2,7 +2,6 @@ import {BackButton, Container} from "../../../components";
 import {Section} from "../components/section";
 import {useNavigate, useParams} from "react-router-dom";
 import {useFAQQuestion} from "../hooks/faq";
-import ReactMarkdown from "react-markdown";
 
 export function FaqQuestionDetail(): JSX.Element {
     const navigate = useNavigate()
@@ -23,8 +22,6 @@ export function FaqQuestionDetail(): JSX.Element {
             </Container>
         )
     }
-
-    console.log(data)
 
     return (
         <Container>
