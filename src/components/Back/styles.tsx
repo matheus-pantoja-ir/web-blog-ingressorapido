@@ -36,6 +36,7 @@ export const Button = styled.button`
     }
     ${TextButton} {
       color: ${props => props.theme.color.secondary.light};
+      margin: 0 0 0 .3rem;
     }
   }
   

@@ -26,8 +26,18 @@ export const useFAQQuestionsCategory = (id?: string) => {
     })
 }
 
-export const useFAQQuestion = (id?:string) => {
- return useQuery(`question_${id}`, async()=>{
-     const {faqSearchTag, faqQuestion} = await gqlClient.request(questionQuery, {id})
- })
+export const useFAQQuestion = (id?: string) => {
+    return useQuery(`question_${id}`, async () => {
+        const {faqQuestion} = await gqlClient.request(questionQuery, {id})
+        const updatedAtLocalized = new Date(faqQuestion.data.attributes.updatedAt).toLocaleDateString('pt-BR', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        })
+        return {
+            ...faqQuestion.data.attributes,
+            updatedAt: updatedAtLocalized
+        }
+    })
 }

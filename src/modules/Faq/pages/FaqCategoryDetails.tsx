@@ -27,7 +27,6 @@ export function FaqCategoryDetails(): JSX.Element {
     }
 
     const renderQuestions = (question: any) => {
-        console.log(question)
         return (
             <Item key={question.id}>
                 <Link to={`${FAQ_PATH.QUESTION_DETAIL}/${question.id}`}>

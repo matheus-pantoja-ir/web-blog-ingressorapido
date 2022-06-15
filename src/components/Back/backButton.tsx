@@ -2,7 +2,7 @@ import React from "react";
 import {Button, ButtonContainer, IconBack, TextButton} from "./styles";
 
 type TBackButton = {
-    children: React.ReactNode,
+    children?: React.ReactNode,
     handler: () => void
 }
 

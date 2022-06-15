@@ -13,5 +13,4 @@ export const Section = styled.section`
   h1 {
     font-size: 2rem;
   }
-  
 `
